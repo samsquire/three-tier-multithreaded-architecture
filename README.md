@@ -13,10 +13,10 @@ Thanks to these people for comments on this architecture.
 
 # design
 
-This is a server architecture which has three parts **app/IO/CPU**:
- * **CPU** - traditional work stealing worker thread pool 
- * **IO** - handle IO scalably
- * **App** - coordinate parallelism of CPU and IO
+This is a server architecture which has three types of kernel threads: **app/IO/CPU**:
+ * **CPU threads** - traditional work stealing worker thread pool 
+ * **IO threads** - handle IO scalably
+ * **App threads** - coordinate parallelism of CPU and IO with lightweight threads
 
 
 
