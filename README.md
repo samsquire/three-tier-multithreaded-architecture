@@ -4,7 +4,7 @@ This is a design for multithreaded servers that you can adopt for scalability.
 
 * Please email sam@samsquire.com or add a PR if you want to add notes
 
-These people were involved in discussions of this architecture:
+Thanks to these people for comments on this architecture.
 
 |Person|Where to find them|
 |---|---|
