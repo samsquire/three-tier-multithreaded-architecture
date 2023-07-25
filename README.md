@@ -6,6 +6,11 @@ This is a design for multithreaded servers that you can adopt for scalability.
 
 Thanks to these people for comments on this architecture.
 
+|Person|Where to find them|
+|---|---|
+|Verdagon|https://vale.dev/|
+|icefox|Vale discord|
+
 # design
 
 This is a server architecture which has three parts **app/IO/CPU**:
@@ -13,10 +18,7 @@ This is a server architecture which has three parts **app/IO/CPU**:
  * **IO** - handle IO scalably
  * **App** - coordinate parallelism of CPU and IO
 
-|Person|Where to find them|
-|---|---|
-|Verdagon|https://vale.dev/|
-|icefox|Vale discord|
+
 
 
 # diagram
