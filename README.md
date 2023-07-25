@@ -41,3 +41,7 @@ These are lightweight threads that are multiplexed over kernel threads and they 
 
 * These receive IO events and then send events for futher IO or spawn lightweight threads or spawn thread pool tasks for heavy CPU use. 
 * When a socket is ready to send data, we would wait for `EPOLLOUT` event and then send any queued data to send.
+
+# CPU Threads
+
+* A work stealing thread pool is used for CPU tasks. 
