@@ -16,10 +16,11 @@ This is a design for multithreaded servers that you can adopt for scalability.
 
  # App threads
 
-These are **Controllers**
+These are **Controllers** for app logic. They are round robined by the lightweight thread runtime. As a result, they should do no high CPU or IO. They should send IO and CPU requests to either an event for the IO threads to pick up or submit a task for the CPU thread pool. 
 
 These are lightweight threads that are multiplexed over kernel threads and they can yield.
 
 # IO Threads
 
+* These receive IO events and then send events for futher IO or spawn lightweight threads or spawn thread pool tasks for heavy CPU use. 
 * When a socket is ready to send data, we would wait for `EPOLLOUT` event and then send any queued data to send.
