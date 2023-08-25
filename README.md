@@ -16,7 +16,7 @@ Thanks to these people for comments on this architecture.
 This is a server architecture which has three types of kernel threads: **app/IO/CPU**:
  * **CPU threads** - traditional work stealing worker thread pool 
  * **IO threads** - handle IO scalably
- * **App threads** - coordinate parallelism of CPU and IO with lightweight threads
+ * **App threads** - coordinate parallelism of CPU and IO with lightweight threads. Hot loops in these threads can be preempted with the technique from [samsquire/preemtible-thread](https://github.com/samsquire/preemptible-thread)
 
 
 
